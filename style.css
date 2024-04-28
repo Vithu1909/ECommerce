@@ -1,0 +1,158 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: "Poppins", sans-serif; 
+}
+.navbar
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
+}
+.navbar-links
+{
+    display: flex;
+    gap: 10px;
+    text-decoration: none;
+
+}
+.navbar-link a
+{
+    
+    text-decoration: none;
+    color: rgb(2, 17, 37);
+}
+.navbar-link a:hover
+{
+    text-decoration: underline;
+    color: rgb(2, 17, 37);
+}
+.navbar-menu
+{
+    display: none;
+}
+
+.side-nav
+{
+    background-color: rgb(2, 17, 37);
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -60%;
+    padding: 20px;
+    color: white;
+    transition: 2s;
+    
+   
+}
+.sidenavbar-link 
+{
+    margin-bottom: 30px;
+}
+.sidenavbar-links a
+{
+    margin-bottom: 30px;
+    color: white;
+}
+/*header*/
+.header
+{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 50px;
+}
+.header-but
+{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color:rgb(2, 17, 37) ;
+    color: white;
+    margin-top: 10px;
+    cursor: pointer;
+    border: none;
+}
+/* Services */
+.service
+{
+   padding: 20px;
+}
+.service-con1
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.service-con2
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+.service-con2 div{
+background-color: #f2f4f7;
+border-radius: 10px;
+padding: 10px;
+}
+/* New Arrival */
+.newarrival
+{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.newarrival-con
+{
+    position: relative;
+    flex-basis: 20%;
+}
+.newarrival-but
+{
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-top: 10px;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    border-radius: 10px;
+    border: none;
+}
+/* Media query */
+@media screen  and (max-width:600px)
+{
+    .navbar-menu
+    {
+        display: block;
+
+    }
+    .navbar-links
+    {
+        display: none;
+    }
+   .header-img
+   {
+    display: none;
+   }
+   .service-con1
+   {
+    display: none;
+
+   }
+   .service-con2
+   {
+    flex-direction: column;
+
+   }
+    
+}
