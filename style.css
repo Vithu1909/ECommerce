@@ -41,9 +41,9 @@ body{
 {
     background-color: rgb(2, 17, 37);
     width: 50%;
-    height: 100%;
+    height: 200px;
     position: absolute;
-    top: 0;
+    
     left: -60%;
     padding: 20px;
     color: white;
@@ -64,21 +64,31 @@ body{
 .header
 {
     display: flex;
-    justify-content: center;
-    gap: 50px;
+    justify-content: space-around;
+    align-items: center;
+    gap: 100px;
     padding: 50px;
+    background-color: rgb(131, 134, 133);
 }
+
+
 .header-but
 {
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
-    background-color:rgb(2, 17, 37) ;
+    background-color:rgb(8, 41, 85) ;
     color: white;
     margin-top: 10px;
     cursor: pointer;
     border: none;
+}
+.header-but:hover
+{
+    background-color:rgb(2, 17, 37) ;
+    transform: scale(1.1);
+
 }
 /* Services */
 .service
@@ -99,9 +109,9 @@ body{
     gap: 10px;
 }
 .service-con2 div{
-background-color: #f2f4f7;
+background-color: #ebeff4;
 border-radius: 10px;
-padding: 10px;
+padding: 20px;
 }
 /* New Arrival */
 .newarrival
@@ -113,7 +123,7 @@ padding: 10px;
 .newarrival-con
 {
     position: relative;
-    flex-basis: 20%;
+    flex-basis: 25%;
 }
 .newarrival-but
 {
@@ -128,13 +138,167 @@ padding: 10px;
     border-radius: 10px;
     border: none;
 }
+
+.newarrival-but:hover{
+    background-color:rgb(2, 17, 37) ;
+    color: white;
+
+}
+
+/* news */
+.news
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+.news input
+{
+    margin-bottom:10px ;
+    margin-top:10px ;
+    width: 80vw;
+    padding: 11px;
+    border: solid black 3px;
+
+}
+.news button
+{
+    margin-top: 10px;
+    color: white;
+    background-color:rgb(11, 37, 73) ;
+    padding: 10px;
+    border-radius: 10px;
+    border:none;
+
+}
+.news button:hover
+{
+    background-color:rgb(2, 17, 37) ;
+    transform: scale(1.1);
+
+}
+.footer
+{
+    margin-top: 20px;
+    background-color:rgb(2, 17, 37) ;
+    color: white;
+    padding: 40px;
+    
+}
+/* collection */
+.product-section
+{
+    margin: 20px;
+}
+.product-search
+{
+    width: 80%; 
+    border: solid black 2px;
+    border-radius: 10px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+
+}
+.product-search input
+{
+   
+    border: none;
+    background: transparent;
+    width: 100%;
+}
+.product-search input:focus
+{
+   outline: none;
+   
+}
+.product
+{
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.product-box
+{
+    text-align: center;
+    flex-basis: 20%;
+}
+.product-box img{
+    border-radius: 10px;
+}
+.nofound
+{
+    background-color:transparent;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    text-align: center;
+    display: none;
+    width: 50%;
+    margin-left: 25%;
+    
+}
+/* contact */
+.contact
+{
+    padding: 20px;
+    width: 60%;
+    margin-top: 60px;
+    border-radius: 10px;
+    border: solid black 1px;
+    margin-left: 20%;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(120, 41, 41, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    margin-bottom: 50px;
+
+}
+
+.logo
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contact-con
+{
+    display: flex;
+    justify-content:space-around;
+}
+.input-box
+{
+    padding: 20px;
+   
+}
+.input-box input
+{
+    padding: 10px;
+    width: 100%;
+}
+.input-box button
+{
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    color: white;
+    background-color:rgb(11, 37, 73) ;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 2px;
+    align-items: center;
+    width: 100px;
+}
 /* Media query */
 @media screen  and (max-width:600px)
 {
     .navbar-menu
     {
         display: block;
-
     }
     .navbar-links
     {
@@ -155,4 +319,40 @@ padding: 10px;
 
    }
     
+}
+@media (max-width: 768px) {
+    /* Stacking the content vertically */
+    .contact-con {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-con div {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Further adjustments for very small screens */
+@media (max-width: 845px) {
+    /* Reduce padding for smaller screens */
+    .contact {
+        padding: 10px;
+    }
+
+    /* Adjust font size for smaller screens */
+    .logo h2,
+    .contact-con h2 {
+        font-size: 18px;
+    }
+
+    .contact-con img {
+        width: 100%;
+        height: auto;
+    }
+    .input-box input
+{
+   
+    width: 80%;
+}
 }
